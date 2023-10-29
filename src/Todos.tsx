@@ -1,6 +1,11 @@
 import React from "react";
 
-export const Todos = React.memo(({ todos, addTodo }) => {
+interface TodosProps {
+    todos: string[];
+    addTodo: () => void;
+  }
+
+export const Todos: React.FC<TodosProps> = React.memo(({ todos, addTodo }) => {
     return (
         <div>
             <h2>My Todos</h2>
